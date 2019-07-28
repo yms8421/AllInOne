@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/src/.vs/Perque/v15
+/src/admin/Perque.Admin/obj
+/src/api/Perque.Api/obj/Debug/netcoreapp2.1
+/src/api/Perque.Api/obj
+/src/data/Perque.Contracts/obj
+/src/data/Perque.Data/obj
+/src/data/Perque.Entities/obj
+/src/web/Perque.Hosting/obj
