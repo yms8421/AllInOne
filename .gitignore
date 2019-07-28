@@ -11,3 +11,9 @@
 /src/data/Perque.Data/obj
 /src/data/Perque.Entities/obj
 /src/web/Perque.Hosting/obj
+/src/admin/Perque.Admin/bin/Debug/netcoreapp2.1
+/src/api/Perque.Api/bin/Debug/netcoreapp2.1
+/src/data/Perque.Contracts/bin/Debug/netcoreapp2.1
+/src/data/Perque.Data/bin/Debug/netcoreapp2.1
+/src/data/Perque.Entities/bin/Debug/netcoreapp2.1
+/src/web/Perque.Hosting/bin/Debug/netcoreapp2.1

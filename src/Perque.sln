@@ -23,6 +23,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perque.Contracts", "data\Pe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perque.Data", "data\Perque.Data\Perque.Data.csproj", "{4A42BCA5-8514-4795-8B7A-C911E9B1D4DC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{A3B7E790-023B-4E15-B117-B4E93F7A294F}"
+	ProjectSection(SolutionItems) = preProject
+		Initial.sql = Initial.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
