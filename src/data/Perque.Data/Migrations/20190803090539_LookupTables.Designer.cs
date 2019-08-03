@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Perque.Data.Context;
 
 namespace Perque.Data.Migrations
 {
     [DbContext(typeof(PerqueContext))]
-    partial class PerqueContextModelSnapshot : ModelSnapshot
+    [Migration("20190803090539_LookupTables")]
+    partial class LookupTables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -11,21 +11,22 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "web", "web", "{2B4D371E-174
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "admin", "admin", "{74004644-2152-4A75-A7CA-5B5F8656458F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perque.Hosting", "web\Perque.Hosting\Perque.Hosting.csproj", "{F868E9BE-7DB5-4B0E-923D-94123318E5A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perque.Hosting", "web\Perque.Hosting\Perque.Hosting.csproj", "{F868E9BE-7DB5-4B0E-923D-94123318E5A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perque.Api", "api\Perque.Api\Perque.Api.csproj", "{FC25F685-43E3-4F3E-9286-411A5563A945}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perque.Api", "api\Perque.Api\Perque.Api.csproj", "{FC25F685-43E3-4F3E-9286-411A5563A945}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perque.Admin", "admin\Perque.Admin\Perque.Admin.csproj", "{AC43E5BF-E61D-4CA9-B092-A95A39B29F8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perque.Admin", "admin\Perque.Admin\Perque.Admin.csproj", "{AC43E5BF-E61D-4CA9-B092-A95A39B29F8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perque.Entities", "data\Perque.Entities\Perque.Entities.csproj", "{C7B100B3-3F7B-468B-896E-9A1780C1ACF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perque.Entities", "data\Perque.Entities\Perque.Entities.csproj", "{C7B100B3-3F7B-468B-896E-9A1780C1ACF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perque.Contracts", "data\Perque.Contracts\Perque.Contracts.csproj", "{0D373B40-173B-49B6-BABB-19400B9B5F73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perque.Contracts", "data\Perque.Contracts\Perque.Contracts.csproj", "{0D373B40-173B-49B6-BABB-19400B9B5F73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perque.Data", "data\Perque.Data\Perque.Data.csproj", "{4A42BCA5-8514-4795-8B7A-C911E9B1D4DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perque.Data", "data\Perque.Data\Perque.Data.csproj", "{4A42BCA5-8514-4795-8B7A-C911E9B1D4DC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{A3B7E790-023B-4E15-B117-B4E93F7A294F}"
 	ProjectSection(SolutionItems) = preProject
 		Initial.sql = Initial.sql
+		migrationscripts.txt = migrationscripts.txt
 	EndProjectSection
 EndProject
 Global
