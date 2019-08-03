@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.Extensions.Options;
+using Perque.Contracts;
 using Perque.Entities.Infra;
 using Perque.Entities.Productivity;
 using Perque.Entities.Sales;
@@ -8,6 +9,11 @@ namespace Perque.Data.Context
 {
     public class PerqueContext : DbContext
     {
+        private readonly AppSettings settings;
+        public PerqueContext(IOptions<AppSettings> options)
+        {
+            settings = options.Value;
+        }
         public PerqueContext(DbContextOptions<PerqueContext> options) : base(options)
         {
 
@@ -16,7 +22,7 @@ namespace Perque.Data.Context
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=.;Database=PerqueDB;User Id=sa;Password=123");
+                optionsBuilder.UseSqlServer(settings.ConnectionStrings.MainDatabase);
             }
         }
         #region DbSets
@@ -32,17 +38,8 @@ namespace Perque.Data.Context
         public virtual DbSet<Basket> Baskets { get; set; }
         public virtual DbSet<Invoice> Invoices { get; set; }
         public virtual DbSet<Order> Orders { get; set; } 
+        public virtual DbSet<LookUp> Lookups { get; set; } 
+        public virtual DbSet<LookUpType> LookUpTypes { get; set; } 
         #endregion
-    }
-
-    public class PerqueContextFactory : IDesignTimeDbContextFactory<PerqueContext>
-    {
-        public PerqueContext CreateDbContext(string[] args)
-        {
-            var optionsBuilder = new DbContextOptionsBuilder<PerqueContext>();
-            optionsBuilder.UseSqlServer("Server=.;Database=PerqueDB;User Id=sa;Password=123");
-
-            return new PerqueContext(optionsBuilder.Options);
-        }
     }
 }

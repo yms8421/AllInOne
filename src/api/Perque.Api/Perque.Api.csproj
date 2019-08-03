@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\data\Perque.Contracts\Perque.Contracts.csproj" />
     <ProjectReference Include="..\..\data\Perque.Data\Perque.Data.csproj" />
   </ItemGroup>
 
