@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Perque.Business.Abstractions\Perque.Business.Abstractions.csproj" />
+    <ProjectReference Include="..\Perque.Data\Perque.Data.csproj" />
+  </ItemGroup>
+
+</Project>

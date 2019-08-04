@@ -6,12 +6,18 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Perque.Business;
+using Perque.Business.Abstractions;
 using Perque.Contracts;
+using Perque.Data;
 using Perque.Data.Context;
+using Perque.Data.Repository;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace Perque.Api
 {
@@ -29,6 +35,17 @@ namespace Perque.Api
         {
             services.Configure<AppSettings>(Configuration);
             services.AddDbContext<PerqueContext>();
+
+            var serviceProvider = services.BuildServiceProvider();
+            var options = serviceProvider.GetRequiredService<IOptions<AppSettings>>();
+
+            services.AddScoped<DbContext, PerqueContext>(ctx => new PerqueContext(options));
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<ICategoryService, CategoryService>();
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Info { Title = "Values Api", Version = "v1" });
+            });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -42,9 +59,17 @@ namespace Perque.Api
             {
                 app.UseHsts();
             }
-
+            
             app.UseHttpsRedirection();
             app.UseMvc();
+
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Perque.Api");
+                c.RoutePrefix = string.Empty;
+            });
         }
     }
 }

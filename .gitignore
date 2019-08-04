@@ -17,3 +17,9 @@
 /src/data/Perque.Data/bin/Debug/netcoreapp2.1
 /src/data/Perque.Entities/bin/Debug/netcoreapp2.1
 /src/web/Perque.Hosting/bin/Debug/netcoreapp2.1
+/src/data/Perque.Business/bin/Debug/netcoreapp2.1
+/src/data/Perque.Business/obj
+/src/data/Perque.Business.Abstractions/bin/Debug/netcoreapp2.1
+/src/data/Perque.Business.Abstractions/obj
+/src/POC/Perque.ApiUsage/bin/Debug
+/src/POC/Perque.ApiUsage/obj/Debug
