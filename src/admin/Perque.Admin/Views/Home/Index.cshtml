@@ -1,0 +1,15 @@
+﻿<h2>Ana Sayfa</h2>
+
+<div class="row" id="indexMain">
+    <div class="col-md-4">{{number}}</div>
+    <div class="col-md-4">
+        <button class="btn btn-primary" @@click="increase">Artır</button>
+    </div>
+    <div class="col-md-4">
+        <button class="btn btn-primary" @@click="decrease">Azalt</button>
+    </div>
+</div>
+
+@section pagescript{
+    <script src="~/pageScripts/home/index/page.js"></script>
+}
