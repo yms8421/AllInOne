@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Perque.Business.Abstractions;
 using Perque.Contracts.Dtos;
-using Perque.Data;
-using Perque.Entities.Productivity;
 
 namespace Perque.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Produces("application/json")]
     public class CategoriesController : ControllerBase
     {
         private readonly ICategoryService service;
@@ -21,7 +18,7 @@ namespace Perque.Api.Controllers
             this.service = service;
         }
         [HttpGet]
-        public List<BasicInfoDto> Get()
+        public List<BasicDetailedInfoDto> Get()
         {
             return service.GetCategories().ToList();
         }

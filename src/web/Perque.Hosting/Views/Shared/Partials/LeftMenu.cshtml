@@ -1,0 +1,16 @@
+﻿<div class="offcanvas-container" id="shop-categories">
+    <div class="offcanvas-header">
+        <h3 class="offcanvas-title">{{title}}</h3>
+    </div>
+    <nav class="offcanvas-menu">
+        <ul class="menu">
+            <li class="has-children" v-for="c in categories">
+                <span><a href="#">{{c.name}}</a><span class="sub-menu-toggle"></span></span>
+                <ul class="offcanvas-submenu">
+                    <li class="back-btn"><a href="#">Geri Dön</a></li>
+                    <li v-for="s in c.children"><a href="#">{{s.name}}</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>

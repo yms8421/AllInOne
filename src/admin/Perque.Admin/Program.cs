@@ -19,6 +19,7 @@ namespace Perque.Admin
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseUrls("https://localhost:5001")
                 .UseStartup<Startup>();
     }
 }

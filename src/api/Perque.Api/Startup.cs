@@ -26,7 +26,6 @@ namespace Perque.Api
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            //
         }
 
         public IConfiguration Configuration { get; }
@@ -46,6 +45,7 @@ namespace Perque.Api
             {
                 c.SwaggerDoc("v1", new Info { Title = "Values Api", Version = "v1" });
             });
+            services.AddCors();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -59,8 +59,16 @@ namespace Perque.Api
             {
                 app.UseHsts();
             }
-            
-            app.UseHttpsRedirection();
+
+            app.UseCors(opt =>
+            {
+                if (env.IsDevelopment())
+                {
+                    opt.WithOrigins("http://localhost:5002")
+                       .AllowAnyHeader()
+                       .AllowAnyMethod();
+                }
+            });
             app.UseMvc();
 
 

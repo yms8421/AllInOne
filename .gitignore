@@ -23,3 +23,11 @@
 /src/data/Perque.Business.Abstractions/obj
 /src/POC/Perque.ApiUsage/bin/Debug
 /src/POC/Perque.ApiUsage/obj/Debug
+/src/api/Perque.Api/bin/Release/netcoreapp2.1
+/src/data/Perque.Business/bin/Release/netcoreapp2.1
+/src/data/Perque.Business.Abstractions/bin/Release/netcoreapp2.1
+/src/data/Perque.Contracts/bin/Release/netcoreapp2.1
+/src/data/Perque.Data/bin/Release/netcoreapp2.1
+/src/data/Perque.Entities/bin/Release/netcoreapp2.1
+/src/POC/Perque.ApiUsage/obj/Release
+/src/api/Perque.Api/Properties/PublishProfiles

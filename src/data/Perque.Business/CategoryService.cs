@@ -20,13 +20,19 @@ namespace Perque.Business
             this.unitOfWork = unitOfWork;
             repo = unitOfWork.GetRepository<Category>();
         }
-        public IEnumerable<BasicInfoDto> GetCategories()
+        public IEnumerable<BasicDetailedInfoDto> GetCategories()
         {
-            var result = repo.Select(i => new BasicInfoDto
-            {
-                Id = i.Id,
-                Name = i.Name
-            }).ToList();
+            var result = repo.Include(i => i.SubCategories)
+                .Select(i => new BasicDetailedInfoDto
+                {
+                    Id = i.Id,
+                    Name = i.Name,
+                    Children = i.SubCategories.Select(a => new BasicDetailedInfoDto
+                    {
+                        Id = a.Id,
+                        Name = a.Name
+                    }).ToList()
+                }).ToList();
             return result;
         }
 

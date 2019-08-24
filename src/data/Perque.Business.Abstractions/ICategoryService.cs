@@ -5,7 +5,7 @@ namespace Perque.Business.Abstractions
 {
     public interface ICategoryService
     {
-        IEnumerable<BasicInfoDto> GetCategories();
+        IEnumerable<BasicDetailedInfoDto> GetCategories();
         BasicDetailedInfoDto GetCategory(int id);
     }
 }
