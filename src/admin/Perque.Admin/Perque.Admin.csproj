@@ -5,9 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\Sales\Controllers\" />
+    <Folder Include="Areas\Sales\Models\" />
+    <Folder Include="Areas\Sales\Views\" />
     <Folder Include="Views\Shared\Partials\" />
     <Folder Include="wwwroot\css\" />
-    <Folder Include="wwwroot\fonts\" />
     <Folder Include="wwwroot\img\" />
   </ItemGroup>
 
@@ -18,6 +20,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Update="Areas\Productivity\Views\Category\Index(Form Collection).cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Areas\Productivity\Views\Category\Index(Model Binding).cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Areas\Productivity\Views\_viewstart.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
     <Content Update="Views\_viewstart.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>

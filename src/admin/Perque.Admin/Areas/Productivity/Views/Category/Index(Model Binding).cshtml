@@ -1,0 +1,30 @@
+﻿@model Perque.Admin.Areas.Productivity.Models.CategoryViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Kategori Yönetimi</h2>
+
+@using (Html.BeginForm("Save", "Category", new { area = "Productivity" }, FormMethod.Post))
+{
+    <div class="row">
+        <div class="col-md-3">
+            @Html.TextBoxFor(i => i.Name)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            @Html.TextAreaFor(i => i.Description)
+        </div>
+    </div>
+    <div>
+        <div class="col-md-3">
+            <input type="submit" value="Kaydet" class="btn btn-primary" />
+        </div>
+    </div>
+}
+
+
+
+
+

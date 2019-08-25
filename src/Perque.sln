@@ -33,9 +33,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "POC", "POC", "{E5C68404-F7E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perque.ApiUsage", "POC\Perque.ApiUsage\Perque.ApiUsage.csproj", "{CA8BC0E4-C12C-4896-ACE8-7ADBFA5A7D14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perque.Business", "data\Perque.Business\Perque.Business.csproj", "{5FCB5527-0EF6-4EDD-B689-5003D9149DA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perque.Business", "data\Perque.Business\Perque.Business.csproj", "{5FCB5527-0EF6-4EDD-B689-5003D9149DA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perque.Business.Abstractions", "data\Perque.Business.Abstractions\Perque.Business.Abstractions.csproj", "{F76D904A-800B-4481-A759-2B7A004C90EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perque.Business.Abstractions", "data\Perque.Business.Abstractions\Perque.Business.Abstractions.csproj", "{F76D904A-800B-4481-A759-2B7A004C90EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perque.CDN", "Perque.CDN\Perque.CDN.csproj", "{E7C99D1D-906C-416C-B1B5-17A16F2C2674}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,6 +81,10 @@ Global
 		{F76D904A-800B-4481-A759-2B7A004C90EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F76D904A-800B-4481-A759-2B7A004C90EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F76D904A-800B-4481-A759-2B7A004C90EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7C99D1D-906C-416C-B1B5-17A16F2C2674}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7C99D1D-906C-416C-B1B5-17A16F2C2674}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7C99D1D-906C-416C-B1B5-17A16F2C2674}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7C99D1D-906C-416C-B1B5-17A16F2C2674}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -93,6 +99,7 @@ Global
 		{CA8BC0E4-C12C-4896-ACE8-7ADBFA5A7D14} = {E5C68404-F7E0-4C80-82D5-377269D97268}
 		{5FCB5527-0EF6-4EDD-B689-5003D9149DA8} = {0B5BA989-0CAC-4FD7-B52D-F7974507CACB}
 		{F76D904A-800B-4481-A759-2B7A004C90EF} = {0B5BA989-0CAC-4FD7-B52D-F7974507CACB}
+		{E7C99D1D-906C-416C-B1B5-17A16F2C2674} = {2B4D371E-1744-457A-9026-1BFC1EFDFBD7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FA05411A-5CBF-4A7B-95A9-280C4060EE9E}

@@ -31,3 +31,5 @@
 /src/data/Perque.Entities/bin/Release/netcoreapp2.1
 /src/POC/Perque.ApiUsage/obj/Release
 /src/api/Perque.Api/Properties/PublishProfiles
+/src/Perque.CDN/bin
+/src/Perque.CDN/obj
