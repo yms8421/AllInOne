@@ -1,4 +1,5 @@
 ﻿using Perque.Contracts.Dtos;
+using Perque.Contracts.Dtos.Productivity;
 using System.Collections.Generic;
 
 namespace Perque.Business.Abstractions
@@ -7,5 +8,6 @@ namespace Perque.Business.Abstractions
     {
         IEnumerable<BasicDetailedInfoDto> GetCategories();
         BasicDetailedInfoDto GetCategory(int id);
+        bool NewCategory(CategoryDto data);
     }
 }

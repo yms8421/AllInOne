@@ -64,7 +64,7 @@ namespace Perque.Api
             {
                 if (env.IsDevelopment())
                 {
-                    opt.WithOrigins("http://localhost:5002")
+                    opt.WithOrigins("http://localhost:5002", "http://localhost:5001")
                        .AllowAnyHeader()
                        .AllowAnyMethod();
                 }

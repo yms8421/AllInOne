@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Perque.Business.Abstractions;
 using Perque.Contracts.Dtos;
+using Perque.Contracts.Dtos.Productivity;
 using Perque.Data;
 using Perque.Entities.Productivity;
 using System;
@@ -51,6 +52,28 @@ namespace Perque.Business
                                 }).FirstOrDefault(i => i.Id == id);
 
             return category;
+        }
+
+        public bool NewCategory(CategoryDto data)
+        {
+            var category = new Category
+            {
+                Name = data.Name,
+                IsActive = true
+            };
+            repo.Add(category);
+            var subCatRepo = unitOfWork.GetRepository<SubCategory>();
+            foreach (var sc in data.SubCategories)
+            {
+                var newSc = new SubCategory
+                {
+                    Name = sc.Name,
+                    IsActive = true,
+                    CategoryId = category.Id
+                };
+                subCatRepo.Add(newSc);
+            }
+            return unitOfWork.SaveChanges() > 0;
         }
     }
 }

@@ -9,6 +9,16 @@
             }).then(function (response) {
                 callback(response.data);
             });
+        },
+        post: function (url, data, callback) {
+            axiosInstance({
+                method: 'post',
+                url: url,
+                data: data,
+                responseType: 'application/json'
+            }).then(function (response) {
+                callback(response.data);
+            });
         }
     };
     var axiosInstance = axios.create({

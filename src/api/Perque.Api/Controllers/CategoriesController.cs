@@ -3,6 +3,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Perque.Business.Abstractions;
 using Perque.Contracts.Dtos;
+using Perque.Contracts.Dtos.Productivity;
 
 namespace Perque.Api.Controllers
 {
@@ -27,6 +28,16 @@ namespace Perque.Api.Controllers
         public BasicDetailedInfoDto Get(int id)
         {
             return service.GetCategory(id);
+        }
+
+        [HttpPost]
+        public IActionResult Post([FromBody]CategoryDto data)
+        {
+            var result =  service.NewCategory(data);
+            if (result)
+                return Ok();
+            else
+                return BadRequest();
         }
     }
 }
