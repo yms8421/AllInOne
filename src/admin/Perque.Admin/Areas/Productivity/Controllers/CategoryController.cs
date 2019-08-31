@@ -17,6 +17,23 @@ namespace Perque.Admin.Areas.Productivity.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult New()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult Detail(int id)
+        {
+            return View();
+        }
 
         #region Bkz. Index(Form Collection).cshtml
         //[HttpPost]

@@ -18,7 +18,6 @@ namespace Perque.Admin
             {
                 app.UseDeveloperExceptionPage();
             }
-
             app.UseStaticFiles();
             app.UseMvc(routes =>
             {

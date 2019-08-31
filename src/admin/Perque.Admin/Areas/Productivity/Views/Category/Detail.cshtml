@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewData["Title"] = "Detail";
+}
+<h3>Kategori Detayı</h3>
+<hr />
+<div id="catdetail">
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="form-group">
+                <label><b>Kategori Adı : </b></label>
+                <label>{{name}}</label>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6" v-if="subCategories.length > 0">
+            <h4>Alt Kategoriler</h4>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Alt Kategori Adı</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="sc in subCategories">
+                        <td>{{sc}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-6" v-else>
+            <div class="alert alert-warning">Bu kategoriye ait alt kategori bulunmamaktadır</div>
+        </div>
+    </div>
+</div>
+
+@section pagescript {
+    <script src="~/pageScripts/productivity/category/detail.js"></script>
+}

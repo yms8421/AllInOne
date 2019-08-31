@@ -26,6 +26,9 @@
     <Content Update="Areas\Productivity\Views\Category\Index(Model Binding).cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
+    <Content Update="Areas\Productivity\Views\Category\Index.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
     <Content Update="Areas\Productivity\Views\_viewstart.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
