@@ -41,6 +41,7 @@ namespace Perque.Api
             services.AddScoped<DbContext, PerqueContext>(ctx => new PerqueContext(options));
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<IProductService, ProductService>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info { Title = "Values Api", Version = "v1" });

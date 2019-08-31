@@ -1,0 +1,16 @@
+﻿<div class="widget widget-featured-products">
+    <h3 class="widget-title">Best Rated</h3>
+    <div class="entry" v-for="p in best">
+        <div class="entry-thumb">
+            <a href="shop-single.html">
+                <img src="~/img/products/01.jpg" alt="Product">
+            </a>
+        </div>
+        <div class="entry-content">
+            <h4 class="entry-title">
+                <a href="shop-single.html">{{p.name}}</a>
+            </h4>
+            <span class="entry-meta">{{p.price}} ₺</span>
+        </div>
+    </div>
+</div>

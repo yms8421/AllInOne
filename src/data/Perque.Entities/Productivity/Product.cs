@@ -18,6 +18,8 @@ namespace Perque.Entities.Productivity
         public double Price { get; set; }
         [Required]
         public int SubCategoryId { get; set; }
+        public bool IsFeatured { get; set; }
+        public double Point { get; set; }
 
         [ForeignKey(nameof(SubCategoryId))]
         public virtual SubCategory SubCategory { get; set; }
