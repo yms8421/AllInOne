@@ -1,6 +1,11 @@
-﻿<div class="widget widget-featured-products">
-    <h3 class="widget-title">Best Rated</h3>
-    <div class="entry" v-for="p in best">
+﻿@model dynamic
+@{ 
+    var title = Model.Title;
+    var items = Model.Binder;
+}
+<div class="widget widget-featured-products">
+    <h3 class="widget-title">@title</h3>
+    <div class="entry" v-for="p in @items">
         <div class="entry-thumb">
             <a href="shop-single.html">
                 <img src="~/img/products/01.jpg" alt="Product">

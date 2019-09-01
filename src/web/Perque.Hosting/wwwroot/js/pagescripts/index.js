@@ -3,7 +3,7 @@
     data: {
         best: [],
         top: [],
-        new: [],
+        news: [],
         featured : []
     },
     mounted() {
@@ -17,11 +17,25 @@
         });
 
         pq.ajax.get("products/new", function (data) {
-            self.new = data;
+            self.news = data;
         });
 
         pq.ajax.get("products/featured", function (data) {
             self.featured = data;
+
+            //sayfadaki carousel için gerekli
+            setTimeout(function () {
+                $('.owl-carousel').owlCarousel({
+                    loop: true,
+                    margin: 10,
+                    nav: true,
+                    responsive: {
+                        0: {
+                            items: 4
+                        }
+                    }
+                })
+            }, 100);
         });
     }
 });

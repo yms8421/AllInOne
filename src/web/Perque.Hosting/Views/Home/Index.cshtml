@@ -2,16 +2,16 @@
     ViewData["Title"] = "Ana Sayfa";
 }
 <div id="index">
-    <section class="container padding-bottom-2x">
+    <section class="container">
         <div class="row">
             <div class="col-md-4 col-sm-6">
-                @{ await Html.RenderPartialAsync("Partials/Products/ListOfThree"); }
+                @{ await Html.RenderPartialAsync("Partials/Products/ListOfThree", new { Title = "En İyi Ürünler", Binder = "best" }); }
             </div>
             <div class="col-md-4 col-sm-6">
-                @{ await Html.RenderPartialAsync("Partials/Products/ListOfThree"); }
+                @{ await Html.RenderPartialAsync("Partials/Products/ListOfThree", new { Title = "En Çok Satanlar", Binder = "top" }); }
             </div>
             <div class="col-md-4 col-sm-6">
-                @{ await Html.RenderPartialAsync("Partials/Products/ListOfThree"); }
+                @{ await Html.RenderPartialAsync("Partials/Products/ListOfThree", new { Title = "Son Eklenenler", Binder = "news" }); }
             </div>
         </div>
     </section>
