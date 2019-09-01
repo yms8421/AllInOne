@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Perque.Business.Abstractions;
+using Perque.Contracts;
 using Perque.Contracts.Dtos;
 using Perque.Contracts.Dtos.Productivity;
 using Perque.Data;
@@ -14,6 +15,7 @@ namespace Perque.Business
     public class CategoryService : ICategoryService
     {
         private readonly IUnitOfWork unitOfWork;
+        private readonly IClaims claims;
         private readonly IRepository<Category> repo;
 
         public CategoryService(IUnitOfWork unitOfWork)

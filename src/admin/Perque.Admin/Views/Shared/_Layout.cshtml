@@ -48,7 +48,7 @@
                     <li>
                         <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">Forms</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="form_basic.html">Basic form</a></li>
+                            <li><a href="@Url.Action("Index", "Category", new { area = "Productivity" })">Kategoriler</a></li>
                             <li><a href="form_advanced.html">Advanced Plugins</a></li>
                             <li><a href="form_wizard.html">Wizard</a></li>
                             <li><a href="form_file_upload.html">File Upload</a></li>
@@ -149,5 +149,11 @@
     <script src="http://cdn.perque.com/js/perque/ajax.js"></script>
 
     @RenderSection("pagescript", false)
+
+    <script>
+        if (!sessionStorage.key("token")) {
+            window.location.href = "/Account/Index";
+        }
+    </script>
 </body>
 </html>

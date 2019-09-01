@@ -11,6 +11,7 @@
     mounted() {
         //bu instance yüklendiğinde
         var self = this;
+        //TODO: add header to request
         pq.ajax.get("categories", function (data) {
             self.items = data.map(function (i) {
                 return {

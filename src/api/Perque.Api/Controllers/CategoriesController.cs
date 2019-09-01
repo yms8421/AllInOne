@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Perque.Business.Abstractions;
+using Perque.Contracts;
 using Perque.Contracts.Dtos;
 using Perque.Contracts.Dtos.Productivity;
 
@@ -10,6 +12,7 @@ namespace Perque.Api.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [Produces("application/json")]
+    [Authorize]
     public class CategoriesController : ControllerBase
     {
         private readonly ICategoryService service;

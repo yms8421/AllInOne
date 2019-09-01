@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
+using Perque.Admin.Middlewares;
 
 namespace Perque.Admin
 {
@@ -19,6 +20,7 @@ namespace Perque.Admin
                 app.UseDeveloperExceptionPage();
             }
             app.UseStaticFiles();
+            app.UseMiddleware<CheckUserClaimMiddleware>();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
